@@ -30,12 +30,14 @@ public class StudentEntity {
     @Nullable
     private String nic;
 
+    @ElementCollection
+    @CollectionTable(name = "student_mobile",joinColumns = @JoinColumn(name = "student_id"))
+    private List<String> mobiles;
+
     @CreationTimestamp
     @Column(name = "Create_date",nullable = false)
     private Date createDate;
 
 
-    @ElementCollection
-    @CollectionTable(name = "student_mobile",joinColumns = @JoinColumn(name = "student_id"))
-    private List<String> mobiles;
+
 }

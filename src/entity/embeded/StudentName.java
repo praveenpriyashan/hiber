@@ -9,7 +9,7 @@ import javax.persistence.Embeddable;
 @NoArgsConstructor
 @AllArgsConstructor
 @Getter@Setter
-@ToString
+@ToString 
 @Embeddable
 public class StudentName {
 
